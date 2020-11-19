@@ -780,7 +780,7 @@ class Worker(_GDrive):
         if isinstance(self._output, HttpError):
             out = f"**ERROR** : `{self._output._get_reason()}`"  # pylint: disable=protected-access
         elif self._output is not None and not self._is_canceled:
-            out = f"**Uploaded Successfully** __in {m_s} seconds__\n\n{self._output}"
+            out = f"**Uploaded Successfully** in {m_s} seconds\n\n{self._output}"
         elif self._output is not None and self._is_canceled:
             out = self._output
         else:
@@ -808,7 +808,7 @@ class Worker(_GDrive):
         if isinstance(self._output, HttpError):
             out = f"**ERROR** : `{self._output._get_reason()}`"  # pylint: disable=protected-access
         elif self._output is not None and not self._is_canceled:
-            out = f"**Downloaded Successfully** __in {m_s} seconds__\n\n`{self._output}`"
+            out = f"**Downloaded Successfully** in {m_s} seconds\n\n`{self._output}`"
         elif self._output is not None and self._is_canceled:
             out = self._output
         else:
@@ -839,7 +839,7 @@ class Worker(_GDrive):
         if isinstance(self._output, HttpError):
             out = f"**ERROR** : `{self._output._get_reason()}`"  # pylint: disable=protected-access
         elif self._output is not None and not self._is_canceled:
-            out = f"**Copied Successfully** __in {m_s} seconds__\n\n{self._output}"
+            out = f"**Copied Successfully** in {m_s} seconds\n\n{self._output}"
         elif self._output is not None and self._is_canceled:
             out = self._output
         else:
