@@ -228,7 +228,7 @@ async def uninvitedPmHandler(message: Message):
     else:
         pmCounter.update({message.from_user.id: 1})
         await message.reply(
-            noPmMessage.format_map(SafeDict(**user_dict)) + '\n`- 🧑🏻‍💻 𝙼 𝙾 𝙽 𝚂 𝚃 𝚁 𝙾 𝚄 𝚂`')
+            noPmMessage.format_map(SafeDict(**user_dict)) + '\n**Maintained By @neil_arms**')
         await asyncio.sleep(1)
         await CHANNEL.log(f"#NEW_MESSAGE\n{user_dict['mention']} has messaged you")
 
