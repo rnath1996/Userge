@@ -87,13 +87,13 @@ async def kang_(message: Message):
             u_name = user.first_name or user.id
         packname = f"a{user.id}_by_userge_{pack}"
         custom_packnick = Config.CUSTOM_PACK_NAME or f"@ItsmeThePunisheR"
-        packnick = f"{custom_packnick} Vol.{pack}"
+        packnick = f"{custom_packnick}"
         cmd = '/newpack'
         if resize:
             photo = resize_photo(photo)
         if is_anim:
             packname += "_anim"
-            packnick += " (Animated)"
+            packnick += " [Animated]"
             cmd = '/newanimated'
         exist = False
         try:
@@ -117,10 +117,10 @@ async def kang_(message: Message):
                 while limit in msg.text:
                     pack += 1
                     packname = f"a{user.id}_by_userge_{pack}"
-                    packnick = f"{custom_packnick} Vol.{pack}"
+                    packnick = f"{custom_packnick}"
                     if is_anim:
                         packname += "_anim"
-                        packnick += " (Animated)"
+                        packnick += " [Animated]"
                     await message.edit("`Switching to Pack " + str(pack) +
                                        " due to insufficient space`")
                     await conv.send_message(packname)
