@@ -208,7 +208,7 @@ class _GDrive:
                 quote(self._get_file_path(file_id, file_name)))
             if mime_type == G_DRIVE_DIR_MIME_TYPE:
                 link += '/'
-            out += f"\n\n♻ [Shareable Link]({link})\n\n**If Shareable Link ask for** `Username` **&** `Password` **than text me Personally 🙂**"
+            out += f"\n\n♻ [Shareable Link]({link})"
         return out
 
     def _upload_file(self, file_path: str, parent_id: str) -> str:
